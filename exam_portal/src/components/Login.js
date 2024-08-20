@@ -11,7 +11,7 @@ const Login = () => {
     e.preventDefault();
 
     // Mock authentication for example purposes
-    const response = await fetch('http://localhost:5000/login', {
+    const response = await fetch('https://online-exam-portal-website.onrender.com/login', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',

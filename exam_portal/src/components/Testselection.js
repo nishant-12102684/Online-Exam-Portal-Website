@@ -10,7 +10,7 @@ const TestSelection = () => {
   useEffect(() => {
     const fetchTests = async () => {
       try {
-        const response = await axios.get('http://localhost:5000/api/tests'); // Adjust port if necessary
+        const response = await axios.get('https://online-exam-portal-website.onrender.com/api/tests'); // Adjust port if necessary
         setTests(response.data);
       } catch (error) {
         console.error('Error fetching tests:', error);

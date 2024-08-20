@@ -1,0 +1,60 @@
+/* src/components/Question.css */
+
+.question-container {
+    margin-bottom: 20px;
+    padding: 20px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .question-text {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    color: #333;
+  }
+  
+  .option-container {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .option {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+    cursor: pointer;
+    transition: background-color 0.2s, border-color 0.2s;
+    margin-bottom: 5px;
+  }
+  
+  .option:hover {
+    background-color: #e0e0e0;
+  }
+  
+  .option-radio {
+    margin-right: 10px;
+    accent-color: #007bff; /* Customize the radio button color */
+  }
+  
+  .option-label {
+    cursor: pointer;
+  }
+  
+  .option.selected {
+    background-color: #4c41e8;
+    color: #fff;
+    border-color: #007bff;
+  }
+  
+  .option.selected .option-radio {
+    accent-color: #fff;
+  }
+  
+  
+  

@@ -1,0 +1,339 @@
+/* src/App.css */
+
+.App {
+  text-align: center;
+  font-family: Arial, sans-serif;
+  padding: 20px;
+  background-color: #f4f4f4;
+  min-height: 100vh;
+}
+
+h1 {
+  color: #333;
+  margin-bottom: 30px;
+}
+
+.exam-container {
+  background-color: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  max-width: 1200px;
+  margin: auto;
+  display: flex;
+  flex-direction: column; /* Adjusted to allow vertical layout */
+  align-items: flex-start;
+}
+
+/* Styles for the layout with question list and exam content */
+.exam-layout {
+  display: flex;
+  width: 100%;
+}
+
+.question-list-container {
+  width: 200px;
+  margin-right: 20px;
+}
+
+.exam-content {
+  flex: 1;
+  background-color: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  max-width: 800px;
+  margin: auto;
+}
+
+/* Styling for the navigation buttons */
+.navigation-buttons {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+.navigation-buttons button {
+  padding: 10px 20px;
+  background-color: #db3434;
+  border: none;
+  color: #fff;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1em;
+}
+
+.navigation-buttons button:hover {
+  background-color: #bf1111;
+}
+
+.navigation-buttons button:disabled {
+  background-color: #bdc3c7;
+  cursor: not-allowed;
+}
+
+/* Style for the Submit Button */
+.submit-button {
+  background-color: #28a745; /* Green background */
+  color: white; /* White text */
+  padding: 10px 20px; /* Padding around the button */
+  border: none; /* No border */
+  border-radius: 5px; /* Rounded corners */
+  cursor: pointer; /* Pointer cursor on hover */
+  font-size: 16px; /* Font size */
+  margin-top: 20px; /* Space above the button */
+  transition: background-color 0.3s ease; /* Smooth background color transition */
+}
+
+.submit-button:hover {
+  background-color: #218838; /* Darker green on hover */
+}
+
+/* Styling for the flag button */
+.flag-button {
+  background-color: #ffc107; /* Amber color */
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  margin-top: 10px;
+  margin-left: 10px;
+  transition: background-color 0.3s ease;
+}
+
+.flag-button:hover {
+  background-color: #e0a800; /* Darker amber on hover */
+}
+
+/* Styling for the status panel */
+.status-panel {
+  margin-top: 20px;
+  padding: 15px;
+  background-color: #f8f9fa; /* Light gray background */
+  border-radius: 8px;
+  border: 1px solid #ddd;
+}
+
+.status-panel h3 {
+  margin-bottom: 10px;
+}
+
+.status-panel p {
+  margin: 5px 0;
+  font-size: 16px;
+}
+
+/* Styling for the Question List */
+.question-list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+}
+
+.question-list-item {
+  background-color: #ddd;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  padding: 10px;
+  text-align: center;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.question-list-item:hover {
+  background-color: #bbb;
+}
+
+.question-list-item.active {
+  background-color: #3498db;
+  color: white;
+  font-weight: bold;
+}
+
+/* Color for attempted questions */
+.question-list-item.attempted {
+  background-color: #1e6f31; /* Light green or any color to indicate attempted questions */
+  color: #04240b; /* Dark green text for contrast */
+}
+
+/* Color for flagged questions */
+.question-list-item.flagged {
+  background-color: #ffc107; /* Amber color for flagged questions */
+  color: #070d13; /* Darker text for contrast */
+}
+
+/* Color for questions that are both attempted and flagged */
+.question-list-item.attempted.flagged {
+  background-color: #deff04; /* Light red color for both attempted and flagged */
+  color: #270b0e; /* Dark red text for contrast */
+}
+
+/* Color for active question */
+.question-list-item.active {
+  background-color: #3498db; /* Blue for the active question */
+  color: white;
+  font-weight: bold;
+}
+
+/* Styling for the scorecard */
+.scorecard-container {
+  background-color: #ede2b9;
+  padding: 30px;
+  margin: 30px auto;
+  border-radius: 10px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+  max-width: 500px;
+  text-align: center;
+  font-family: 'Arial', sans-serif;
+}
+
+.scorecard-container h2 {
+  font-size: 2em;
+  color: #461ee8;
+  margin-bottom: 20px;
+}
+
+.scorecard-container p {
+  font-size: 1.2em;
+  color: #34495e;
+}
+
+.scorecard-container .score {
+  font-size: 3em;
+  color: #e74c3c;
+  margin-top: 10px;
+  font-weight: bold;
+}
+
+.scorecard-container button {
+  padding: 10px 25px;
+  background-color: #e74c3c;
+  border: none;
+  color: #fff;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1.1em;
+  margin-top: 20px;
+}
+
+.scorecard-container button:hover {
+  background-color: #c0392b;
+}
+
+/* Auth container styles */
+.auth-container {
+  max-width: 400px;
+  margin: 50px auto;
+  background-color: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+.auth-container h2 {
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.auth-container form {
+  display: flex;
+  flex-direction: column;
+}
+
+.auth-container input {
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.auth-container button {
+  padding: 10px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background-color 0.3s ease;
+}
+
+.auth-container button:hover {
+  background-color: #0056b3;
+}
+
+.auth-container p {
+  margin-top: 10px;
+  color: #555;
+}
+
+.auth-container a {
+  color: #007bff;
+  text-decoration: none;
+}
+
+.auth-container a:hover {
+  text-decoration: underline;
+}
+
+/* Test selection styles */
+.test-selection {
+  padding: 20px;
+  text-align: center;
+}
+
+.test-selection h2 {
+  margin-bottom: 20px;
+}
+
+.test-selection ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.test-selection li {
+  margin: 10px 0;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.test-selection li:hover {
+  background-color: #f0f0f0;
+}
+
+/* Create test styles */
+.create-test {
+  padding: 20px;
+}
+
+.create-test .question {
+  margin-bottom: 20px;
+}
+
+.create-test .options {
+  margin-left: 20px;
+}
+
+.create-test .options div {
+  margin-bottom: 10px;
+}
+
+/* Camera Preview */
+.camera-preview {
+  position: relative;
+  width: 7cm; /* Adjusted width */
+  height: 7cm; /* Adjusted height */
+  border: 2px solid #ccc; /* Optional border */
+  margin-top: 20px; /* Space below the question list */
+}
+
+.camera-preview video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Ensure the video covers the entire container */
+}

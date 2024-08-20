@@ -20,7 +20,7 @@ const Exam = () => {
   useEffect(() => {
     const fetchQuestions = async () => {
       try {
-        const response = await axios.get(`http://localhost:5000/api/test/${testId}`);
+        const response = await axios.get(`https://online-exam-portal-website.onrender.com/api/test/${testId}`);
         setQuestions(response.data.questions);
         setCameraVisible(true); // Show camera when test starts
       } catch (error) {

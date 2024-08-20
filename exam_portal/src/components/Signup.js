@@ -11,7 +11,7 @@ const Signup = () => {
     e.preventDefault();
 
     // Mock signup for example purposes
-    const response = await fetch('http://localhost:5000/signup', {
+    const response = await fetch('https://online-exam-portal-website.onrender.com/signup', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
